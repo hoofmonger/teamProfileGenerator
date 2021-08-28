@@ -20,6 +20,14 @@ test("that the employee can have an email", ()=>{
     expect(employeeEmail.email).toBe("email@email.com")
 })
 test("that the employee can have a role", ()=>{
-    const employeeRole = new Employee("", 1, "email@email.com", getRole())
-    expect(employeeRole.getRole()).toBe["Manager", "Engineer", "Intern"]
+    const employeeRole = new Employee("", 1, "email@email.com", "Manager")
+    expect(employeeRole.employeeRole).toBe["Manager", "Engineer", "Intern"]
+})
+test("that the employee can have a role", ()=>{
+    const employeeRole = new Employee("", 1, "email@email.com", "Engineer")
+    expect(employeeRole.employeeRole).toBe["Manager", "Engineer", "Intern"]
+})
+test("that the employee can have a role", ()=>{
+    const employeeRole = new Employee("", 1, "email@email.com", "Intern")
+    expect(employeeRole.employeeRole).toBe["Manager", "Engineer", "Intern"]
 })
