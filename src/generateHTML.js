@@ -8,6 +8,26 @@ const generateHTML = (questions) =>
   <title>Document</title>
 </head>
 <body>
- 
+ ${generateManager(questions)}
 </body>
 </html>`;
+
+
+
+const generateManager = (questions) => {
+  //console.log(questions.manager[0])
+  questions.forEach( => {
+   return `<div>
+<h1>${questions.name}</h1>
+<h2>${questions.employeeRole}</h2>
+<ul>
+    <li>${questions.id};</li>
+    <li>${questions.email}</li>
+    <li>${questions.officeNumber}</li>
+</ul>
+</div>`
+  });
+
+}
+
+module.exports=generateHTML
